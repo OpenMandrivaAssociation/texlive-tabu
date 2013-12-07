@@ -6,7 +6,7 @@
 # catalog-version 2.8
 Name:		texlive-tabu
 Version:	2.8
-Release:	3
+Release:	4
 Summary:	Flexible LaTeX tabulars
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabu
