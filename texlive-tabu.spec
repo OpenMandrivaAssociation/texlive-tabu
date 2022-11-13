@@ -1,19 +1,13 @@
-# revision 21534
-# category Package
-# catalog-ctan /macros/latex/contrib/tabu
-# catalog-date 2011-02-27 12:23:54 +0100
-# catalog-license lppl1.3
-# catalog-version 2.8
 Name:		texlive-tabu
-Version:	2.8
-Release:	11
+Version:	61719
+Release:	1
 Summary:	Flexible LaTeX tabulars
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabu
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -42,26 +36,24 @@ specifies a target width, and \begin{tabu} spread <dimen>
 enlarges the environment's "natural" width.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/tabu/tabu.sty
-%doc %{_texmfdistdir}/doc/latex/tabu/README
-%doc %{_texmfdistdir}/doc/latex/tabu/tabu.pdf
+%{_texmfdistdir}/tex/latex/tabu
+%doc %{_texmfdistdir}/doc/latex/tabu
 #- source
-%doc %{_texmfdistdir}/source/latex/tabu/tabu.drv
-%doc %{_texmfdistdir}/source/latex/tabu/tabu.dtx
-%doc %{_texmfdistdir}/source/latex/tabu/tabu.ins
+%doc %{_texmfdistdir}/source/latex/tabu
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
