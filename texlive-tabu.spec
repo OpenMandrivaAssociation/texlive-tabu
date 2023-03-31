@@ -1,6 +1,6 @@
 Name:		texlive-tabu
 Version:	61719
-Release:	1
+Release:	2
 Summary:	Flexible LaTeX tabulars
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabu
