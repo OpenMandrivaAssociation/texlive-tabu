@@ -3,7 +3,7 @@ Version:	61719
 Release:	2
 Summary:	Flexible LaTeX tabulars
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabu
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tabu
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabu.doc.r%{version}.tar.xz
